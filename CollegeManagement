@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class CollegeManagement {
+
+    public static void main(String[] args) {
+
+        // 1️⃣ List – Store student names (order matters, duplicates allowed)
+        List<String> students = new ArrayList<>();
+        students.add("Ravi");
+        students.add("Sita");
+        students.add("Kiran");
+        students.add("Ravi"); // duplicate allowed
+
+        // 2️⃣ Set – Store unique roll numbers (no duplicates)
+        Set<Integer> rollNumbers = new HashSet<>();
+        rollNumbers.add(101);
+        rollNumbers.add(102);
+        rollNumbers.add(103);
+        rollNumbers.add(101); // duplicate ignored
+
+        // 3️⃣ Map – Map roll number to student name
+        Map<Integer, String> studentMap = new HashMap<>();
+        studentMap.put(101, "Ravi");
+        studentMap.put(102, "Sita");
+        studentMap.put(103, "Kiran");
+
+        // 4️⃣ Queue – Students waiting for fee payment (FIFO)
+        Queue<String> feeQueue = new LinkedList<>();
+        feeQueue.add("Ravi");
+        feeQueue.add("Sita");
+        feeQueue.add("Kiran");
+
+        // 5️⃣ Stack – Undo operations (LIFO)
+        Stack<String> actions = new Stack<>();
+        actions.push("Add Student");
+        actions.push("Update Marks");
+        actions.push("Delete Record");
+
+        // 🔹 Output
+        System.out.println("Students List: " + students);
+        System.out.println("Roll Numbers Set: " + rollNumbers);
+        System.out.println("Student Map: " + studentMap);
+        System.out.println("Fee Queue: " + feeQueue);
+
+        System.out.println("Last Action (Undo): " + actions.pop());
+    }
+}
