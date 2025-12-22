@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class MobileAndBrowserSystem {
+
+    public static void main(String[] args) {
+
+        // Mobile Contacts – HashMap (Name → Phone Number)
+        Map<String, String> contacts = new HashMap<>();
+        contacts.put("Ravi", "9876543210");
+        contacts.put("Sita", "9123456780");
+        contacts.put("Kiran", "9988776655");
+
+        //  Search contact by name
+        String searchName = "Sita";
+        if (contacts.containsKey(searchName)) {
+            System.out.println("Contact Found:");
+            System.out.println(searchName + " → " + contacts.get(searchName));
+        } else {
+            System.out.println("Contact Not Found");
+        }
+
+        System.out.println("--------------------------------");
+
+        //  Google Search History – List (Ordered)
+        List<String> searchHistory = new ArrayList<>();
+        searchHistory.add("Java Collection Framework");
+        searchHistory.add("Employee Management System");
+        searchHistory.add("Coding and Decoding Reasoning");
+
+        System.out.println("Google Search History:");
+        for (String search : searchHistory) {
+            System.out.println(search);
+        }
+
+        System.out.println("--------------------------------");
+
+        // Browser Back Button – Stack (LIFO)
+        Stack<String> browserHistory = new Stack<>();
+        browserHistory.push("google.com");
+        browserHistory.push("youtube.com");
+        browserHistory.push("stackoverflow.com");
+
+        System.out.println("Current Page: " + browserHistory.peek());
+
+        // Back button pressed
+        browserHistory.pop();
+        System.out.println("After Back Button, Current Page: " + browserHistory.peek());
+    }
+}
